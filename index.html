@@ -45,7 +45,7 @@
             flex-wrap: wrap;
         }
 
-        .tg{
+        .tg {
             vertical-align: middle;
         }
 
@@ -200,6 +200,7 @@
                 padding: 1rem 0;
                 width: 90%;
             }
+
             .print-link {
                 display: none;
             }
@@ -226,7 +227,8 @@
     <div class="name">Jackfred</div>
     <div class="info">
         <div class="info-item"><a href="mailto:jackfredzk@gmail.com">📧 jackfredzk@gmail.com</a></div>
-        <div class="info-item"><a href="https://t.me/jack4fred"><img src="./tg.png" alt="" class="tg"> jack4fred</a></div>
+        <div class="info-item"><a href="https://t.me/jack4fred" target="_blank"><img src="./tg.png" alt="" class="tg">
+            jack4fred</a></div>
         <div class="info-item">📅 10年经验</div>
         <div class="info-item">📍 南京</div>
     </div>
@@ -257,83 +259,93 @@
                     <span class="time">2023.11-至今</span>
                 </div>
                 <div class="work-content">
-                    负责加密货币钱包应用、跨链桥接交易系统、Telegram Bot 及公司<a href="https://cp.cash/" target="_blank">官网</a>。在敏捷开发流程下（平均每两周一个迭代周期），负责技术选型与架构设计、代码实现、质量保障（自测）以及新功能发布说明（宣讲）
+                    负责加密货币钱包应用、跨链桥接交易系统、Telegram Bot 及公司<a href="https://cp.cash/" target="_blank">官网</a>。在敏捷开发流程下（平均每两周一个迭代周期），负责技术选型、代码实现、质量保障（自测）以及新功能发布说明（宣讲）
                 </div>
                 <div class="project-title">CPcash Wallet <a href="https://wallet.cp.cash/" class="project-link"
                                                             target="_blank">[open]</a></div>
                 <div class="project-content">
-                    <ul class="ul-list">
-                        <li>钱包收款功能</li>
-                        <li>钱包发送、红包功能</li>
-                        <li>钱包国际化</li>
-                        <li>查询用户资产</li>
-                        <li>全局缓存功能</li>
-                    </ul>
+                    负责核心功能模块开发与性能优化，设计并开发钱包核心业务功能，涵盖收款、发送、红包收发、多语言国际化（i18n）支持以及用户资产查询展示 <br/>
+                    集成 WalletConnect 协议，实现安全的钱包签名登录、调用钱包支付接口完成交易并上报 <br/>
+                    基于 TailwindCSS 构建响应式 UI 并实现深色/浅色主题切换；集成 PassKey 技术提供无缝身份验证体验 <br/>
+                    设计并实现高效全局缓存机制（利用 React 状态管理结合本地存储策略），显著提升高频数据（如用户资产、配置信息）访问速度，优化用户体验
                 </div>
                 <div class="project-title">CPcash Telegram Bot <a href="https://t.me/CrossPayTestBot"
                                                                   class="project-link"
                                                                   target="_blank">[open]</a></div>
                 <div class="project-content">
-                    <ul class="ul-list">
-                        <li>提供机器人服务场景功能</li>
-                        <li>提供和后端交互下单功能</li>
-                        <li>监控订单状态并实时推送提醒用户</li>
-                        <li>log日志收集系统</li>
-                    </ul>
+                    基于 Telegraf.js 框架构建高性能机器人服务，实现核心业务自动化与用户交互闭环 <br/>
+                    复杂交互流程设计： 实现长对话场景支持，管理多步骤、上下文相关的用户交互流程，提升复杂业务（如订单创建、客服咨询）的完成率与用户体验 <br/>
+                    订单生命周期管理： 开发与后端服务的安全交互接口，实现用户下单功能。 建立实时订单状态监控机制，主动追踪订单进度。 设计状态变更实时推送系统，及时触达用户关键节点通知（如支付成功、跨桥中转中、订单完成、异常提醒） <br/>
+                    设计并实现集中式 log 日志收集与分析系统，全面记录机器人操作、用户交互及API调用信息，为故障排查、性能优化与用户行为分析提供可靠数据支撑
                 </div>
                 <div class="project-title">CPcash Swap <a href="https://cp.cash/app/" class="project-link"
                                                           target="_blank">[open]</a></div>
                 <div class="project-content">
-                    <ul class="ul-list">
-                        <li>配合Tailwindcss做主题开发功能</li>
-                        <li>订单列表功能</li>
-                        <li>修复并优化下单和渲染功能</li>
-                    </ul>
+                    聚焦用户体验升级与系统健壮性增强 <br/>
+                    基于 TailwindCSS 设计并实现可扩展的主题功能，支持用户界面风格（如深色/浅色模式）的灵活切换与定制，显著提升产品视觉体验与用户偏好适配能力 <br/>
+                     深度优化订单异常处理机制，重构错误捕获、分类与反馈流程，显著提升错误信息的准确性与可读性，加速用户问题排查与系统调试，增强平台整体可靠性
+                </div>
+            </div>
+            <div class="work-item">
+                <div class="work-item-title">
+                    <b>Knivelty Labs</b>
+                    <span class="time">2022.11-2023.11</span>
+                </div>
+                <div class="work-content">
+                    负责项目整体前端开发与维护，确保平台的稳定性和用户体验的优化 <br/>
+                    实现钱包接入与登录功能，支持主流钱包（如 MetaMask 等）与用户链上身份的无缝交互 <br/>
+                    与智能合约进行前端交互，包括 ERC20、ERC721、ERC1155 等合约的授权、转账及操作流程 <br/>
+                    提供链上资产管理服务，确保与智能合约的高效交互，提升了用户的链上交易和资产操作体验
+                </div>
+                <div class="project-title">GamePhylum <a
+                        href="https://game-web3-test.vercel.app/home" class="project-link"
+                        target="_blank">[open]</a></div>
+                <div class="project-content">
+                    开发基于内容创作（攻略撰写）的链上奖励分发机制 <br/>
+                    利用 Ethers.js 深度集成 区块链交互，实现安全可靠的钱包登录认证与用户链上身份管理 <br/>
+                    开发前端模块，实现与合约的直接交互：包括活动创建、奖励规则配置（含空投逻辑）、参与者链上行为资格审核 <br/>
+                    负责整套奖励发放流程的前端逻辑实现与合约调用，保障用户激励体系的顺畅运行 <br/>
                 </div>
             </div>
             <div class="work-item">
                 <div class="work-item-title">
                     <b>鼎捷软件股份有限公司</b>
-                    <span class="time">2022.11-2023.11</span>
+                    <span class="time">2022.1-2022.11</span>
                 </div>
                 <div class="work-content">
-                    负责公司基础组件库的开发和维护 <br/>
-                    负责公司AI动态组件库的开发和维护 <br/>
-                    负责公司各类交付业务项目的开发和维护 <br/>
-                    负责公司项目cesium等gis功能的研发
+                    负责公司核心部门基础组件库的开发和维护，保障内部系统的高效复用和扩展性 <br/>
+                    负责AI产品雅典娜系统的动态组件库开发，推动智能化产品的前端架构优化和功能迭代
                 </div>
                 <div class="project-title">Athena雅典娜AI ERP系统 <a
                         href="https://www.digiwin.com/project/digiwinathena/digiwinathena" class="project-link"
                         target="_blank">[open]</a></div>
                 <div class="project-content">
-                    负责基础组件库、动态组件库的研发，编写组件库文档，概设、详设，负责更新后的发布宣讲，负责对接上游平台开发部的研发需求，负责对接低代码系统的技术支持
+                    负责基础组件库和动态组件库的研发，撰写技术文档并主导发布宣讲 <br/>
+                    对接上游平台的研发需求，提供技术支持并推动低代码平台的集成
                 </div>
             </div>
             <div class="work-item">
                 <div class="work-item-title">
                     <b>南京久润安全科技有限公司</b>
-                    <span class="time">2019.6-2022.11</span>
+                    <span class="time">2019.6-2022.1</span>
                 </div>
                 <div class="work-content">
-                    负责公司头部产品前端架构研发及管理 <br/>
-                    负责公司 saas 平台，微服务产品的架构研发 <br/>
-                    负责公司重要项目以及技术的攻坚工作，如桌面应用（electron），混合开发(uniapp)等
+                    参与SaaS平台和微服务产品的前端研发，推动高可用、高性能系统的搭建
+                    负责多端前端开发，包括桌面应用开发（Electron）与混合开发（Uniapp）
                 </div>
                 <div class="project-title">国家职业技能鉴定一体化系统 <a
                         href="https://xfhyjd.119.gov.cn/#/index/" class="project-link"
                         target="_blank">[open]</a></div>
                 <div class="project-content">
-                    国家应急管理部主导，作为全国消防职业技能鉴定考试系统使用，为国家吸纳消防行业人材 <br/>
-                    业绩：负责系统所有重要功能的架构开发过程管理，包括主系统及八个子系统，包含考试计划、考试编排、对外消息发布、考试报名、人员审核、考试系统、考试结算、证书颁发一套流程，同时开发了除理论考试外的实操和综合考试系统，排队叫号系统，智能终端考核系统，移动端、app
-                    、微信小程序、桌面 electron 应用等一整套生态
+                    负责系统的前端开发设计，涵盖考试计划、报名、人员审核、考试系统、证书颁发等核心功能 <br/>
+                    开发了理论考试、实操考试、排队叫号、智能终端考核等模块，涵盖移动端、App、小程序和桌面端（Electron）
                 </div>
                 <div class="project-title">全国“双随机一公开”消防监督执法系统 <a
                         href="https://xfjd.119.gov.cn:1890/xygk/#/ssj/index" class="project-link"
                         target="_blank">[open]</a></div>
                 <div class="project-content">
-                    国家应急管理部主导，消防监督执法随机、公开、信息化的执法平台，为全国所有数千万家社会单位、九小场所的消防安检查提供在线化、信息化支撑
-                    <br/>
-                    业绩：优化系统运行速度，提高系统稳定性，提高系统的安全性，为系统提供数据统计功能
+                    国家应急管理部主导，消防监督执法随机、公开、信息化的执法平台，为全国所有数千万家社会单位、九小场所的消防安检查提供在线化、信息化支撑 <br/>
+                    优化系统运行速度，提高系统稳定性，提高系统的安全性，为系统提供数据统计功能前端开发
                 </div>
             </div>
             <div class="work-item">
@@ -342,24 +354,17 @@
                     <span class="time">2015.9-2019.6</span>
                 </div>
                 <div class="work-content">
-                    负责公司2C端、2B端、和内网项目的架构和研发 <br/>
-                    负责下属产品部门以及分公司的前端工作 <br/>
-                    负责与产品对接项目功能，协调项目排期，协调测试对接功能 <br/>
-                    对部门人员推进前沿前端技术，提高前端研发工作效率
+                    负责公司2C端和2B端系统的前端设计与研发，确保项目的高效推进与交付 <br/>
+                    统筹下属产品部门与分公司的前端工作，协调项目功能实现、排期管理及测试对接 <br/>
+                    推动前沿前端技术的应用，提高团队研发效率 <br/>
+                    担任全栈开发，负责内网按揭系统的前端（React）和后端（Django）开发
                 </div>
                 <div class="project-title">365淘房 <a
                         href="https://nj.house365.com/" class="project-link"
                         target="_blank">[open]</a></div>
                 <div class="project-content">
                     公司主站下的二手房业务 <br/>
-                    业绩：主要开发并维护项目的二手房模块，为公司其它重点项目做接入和引流
-                </div>
-                <div class="project-title">sass系统 <a
-                        href="https://xfjd.119.gov.cn:1890/xygk/#/ssj/index" class="project-link"
-                        target="_blank">[open]</a></div>
-                <div class="project-content">
-                    xxxx <br/>
-                    业绩：xxxxx
+                    主要开发并维护项目的二手房模块，为公司其它重点项目做接入和引流
                 </div>
             </div>
         </div>
@@ -370,7 +375,7 @@
         <span class="modal-close" id="modal-close">×</span>
         <p>对我的简历满意吗？请联系我</p>
         <div class="modal-buttons">
-            <a href="https://t.me/jack4fred" class="btn" style="text-decoration: none">通过Telegram</a>
+            <a href="https://t.me/jack4fred" class="btn" style="text-decoration: none" target="_blank">通过Telegram</a>
             <button class="btn btn-green" id="copy-email">复制邮箱地址</button>
         </div>
     </div>

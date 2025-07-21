@@ -26,6 +26,7 @@
             margin: 0 auto;
             padding: 2.5rem;
             transition: all 0.3s ease;
+            outline: none;
         }
 
         .name {
@@ -47,6 +48,7 @@
 
         .tg {
             vertical-align: middle;
+            height: 1rem;
         }
 
         .description-content {
@@ -227,7 +229,7 @@
     <div class="name">Jackfred</div>
     <div class="info">
         <div class="info-item"><a href="mailto:jackfredzk@gmail.com">📧 jackfredzk@gmail.com</a></div>
-        <div class="info-item"><a href="https://t.me/jack4fred" target="_blank"><img src="./tg.png" alt="" class="tg">
+        <div class="info-item"><a href="https://t.me/jack4fred" target="_blank"><img src="https://favicon.im/web.telegram.org" alt="" class="tg">
             jack4fred</a></div>
     </div>
     <div class="description mt-20">
@@ -313,7 +315,7 @@
             </div>
             <div class="work-item">
                 <div class="work-item-title">
-                    <b>南京久润安全科技有限公司</b>
+                    <b>久润安全科技有限公司</b>
                     <span class="time">2019.6-2023.1</span>
                 </div>
                 <div class="work-content">
@@ -368,7 +370,7 @@
     </div>
 </div>
 <script>
-    document.body.contentEditable = true;
+    document.querySelector('.main').contentEditable = true;
     setTimeout(() => {
         const modalOverlay = document.getElementById('modal-overlay');
         modalOverlay.style.display = 'flex';
